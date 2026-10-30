@@ -1,0 +1,16 @@
+{
+  "name": "circle",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "pnpm typecheck && pnpm test && pnpm e2e",
+    "typecheck": "pnpm -r --workspace-concurrency=1 typecheck",
+    "test": "pnpm --filter @circle/shared --filter @circle/server --workspace-concurrency=1 test",
+    "e2e": "pnpm --filter @circle/mobile e2e",
+    "dev:server": "pnpm --filter @circle/server dev",
+    "dev:mobile": "pnpm --filter @circle/mobile start"
+  }
+}

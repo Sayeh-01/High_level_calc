@@ -1,0 +1,23 @@
+# Local real-Postgres setup (B3/B4). `docker compose up` then open http://localhost:4100
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: circle
+      POSTGRES_PASSWORD: circle
+      POSTGRES_DB: circle
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+  server:
+    build: .
+    depends_on: [db]
+    environment:
+      DATABASE_URL: postgres://circle:circle@db:5432/circle
+      PUBLIC_URL: http://localhost:4100
+      BETTER_AUTH_SECRET: change-me-to-a-long-random-string
+      NODE_ENV: development
+    ports: ["4100:4100"]
+    volumes: [files:/data/files]
+volumes:
+  pgdata:
+  files:

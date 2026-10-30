@@ -1,0 +1,84 @@
+{
+  "expo": {
+    "name": "Circle",
+    "slug": "circle",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "circleapp",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "app.circle.mobile",
+      "supportsTablet": true,
+      "associatedDomains": [
+        "applinks:circle.example.com"
+      ],
+      "infoPlist": {
+        "NSCameraUsageDescription": "Circle uses the camera for photo proof, receipts and scanning QR codes.",
+        "NSPhotoLibraryUsageDescription": "Circle lets you share photos with your groups.",
+        "NSMicrophoneUsageDescription": "Circle records voice notes for your group chat.",
+        "NSLocationWhenInUseUsageDescription": "Circle uses your location only when you check in or clock in."
+      }
+    },
+    "android": {
+      "package": "app.circle.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "circle.example.com",
+              "pathPrefix": "/join"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png",
+      "name": "Circle"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#2F6F62",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ],
+      "expo-secure-store",
+      "expo-localization",
+      "expo-sharing",
+      "expo-notifications",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Circle lets you share photos with your groups.",
+          "cameraPermission": "Circle uses the camera for photo proof and receipts."
+        }
+      ],
+      "expo-audio"
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "reactCompiler": false
+    }
+  }
+}

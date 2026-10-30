@@ -1,0 +1,111 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1793343472694,
+      "tag": "0000_init",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793346004830,
+      "tag": "0001_v1_1_reach",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1793346721103,
+      "tag": "0002_v1_2_motivation",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1793348810609,
+      "tag": "0003_v1_3_sport_study",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1793349576127,
+      "tag": "0004_v1_4_life",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1793350164325,
+      "tag": "0005_v1_5_care_safety",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1793350881042,
+      "tag": "0006_v2_0_money",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1793352327549,
+      "tag": "0007_v2_2_gameya",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1793353586947,
+      "tag": "0008_v2_4_entitlements",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1793354593141,
+      "tag": "0009_v2_6_payments",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1793355671710,
+      "tag": "0010_v2_8_challenges_forms",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1793356720313,
+      "tag": "0011_v3_0_work",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1793358182332,
+      "tag": "0012_v3_2_company",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1793359114350,
+      "tag": "0013_v3_4_shifts",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1793360059092,
+      "tag": "0014_v3_6_operations",
+      "breakpoints": true
+    }
+  ]
+}
