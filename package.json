@@ -1,0 +1,84 @@
+{
+  "name": "high-level-calc",
+  "productName": "High Level Calc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual (Arabic/English) desktop accountant: per-client job tabs, ledgers, net profit and partner shares, VAT, zakat, depreciation, loans and more.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.js",
+    "dist": "electron-builder --publish never",
+    "dist:win": "electron-builder --win --publish never",
+    "dist:mac": "electron-builder --mac --publish never",
+    "dist:linux": "electron-builder --linux --publish never"
+  },
+  "author": "Islam Elsayeh",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "electron": "^44.8.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "build": {
+    "appId": "com.highlevelcalc.desktop",
+    "productName": "High Level Calc",
+    "copyright": "Copyright © 2026 Islam Elsayeh",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "lib/**/*",
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "High Level Calc",
+      "artifactName": "High-Level-Calc-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "High-Level-Calc-Portable-${version}.${ext}"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.finance",
+      "icon": "build/icon.png"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Office",
+      "icon": "build/icon.png",
+      "maintainer": "Islam Elsayeh"
+    }
+  }
+}
